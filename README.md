@@ -14,7 +14,7 @@
     chmod -R +x ./big-data-project/
     ```
 -   ```bash
-    cd ./big-data-2022/big-data-project/
+    cd ./big-data-project/
     ```
 
 ### What has been done...
