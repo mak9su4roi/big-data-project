@@ -1,4 +1,4 @@
-# Lab VIII: Cassandra and Kafka
+# WikiStream
 
 ### Requirements
 - `bash`
