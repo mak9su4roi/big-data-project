@@ -11,7 +11,7 @@
     git clone https://github.com/mak9su4roi/big-data-projec/
     ```
 -   ```bash
-    chmod -R +x ./big-data-2022/big-data-project/
+    chmod -R +x ./big-data-project/
     ```
 -   ```bash
     cd ./big-data-2022/big-data-project/
