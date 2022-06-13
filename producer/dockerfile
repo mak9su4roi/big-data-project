@@ -1,0 +1,8 @@
+FROM python:3.10-slim
+
+WORKDIR /producer
+COPY requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+COPY producer.py ./producer.py
+
+ENTRYPOINT [ "python3", "producer.py" ]

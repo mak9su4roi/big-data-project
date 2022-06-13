@@ -1,0 +1,9 @@
+FROM python:3.10-slim
+
+WORKDIR /consumer
+COPY ./consumer/requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+COPY ./consumer/consumer.py ./consumer.py
+COPY ./common/session.py ./common/session.py
+
+ENTRYPOINT [ "python3", "consumer.py"]

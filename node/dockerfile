@@ -1,0 +1,9 @@
+FROM cassandra:latest
+
+RUN sed -i 's/batch_size_fail_threshold_in_kb:\ 50/batch_size_fail_threshold_in_kb:\ 50000/' /etc/cassandra/cassandra.yaml
+RUN sed -i 's/batch_size_warn_threshold_in_kb:\ 5/batch_size_warn_threshold_in_kb:\ 5000/' /etc/cassandra/cassandra.yaml
+COPY ./ddl.cql /etc/cassandra/
+COPY ./init.sh /etc/cassandra/
+RUN chmod +x /etc/cassandra/init.sh
+
+ENTRYPOINT [ "/etc/cassandra/init.sh" ]
